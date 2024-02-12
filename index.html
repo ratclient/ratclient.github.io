@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RatCraft Launcher</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="launcher-container">
+    <div class="left-section">
+      <h1>RatCraft Launcher</h1>
+      <p>A Custom build of Eaglercraft 1.5.2 (1.8 in progress)</p>
+     
+    </div>
+    <div class="right-section">
+      <select id="version-dropdown">
+        <option value="1.5.2">1.5.2</option>
+        <option value="1.8.8">1.8.8</option>
+      </select>
+         <button id="launch-button">Launch Game</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+    <style>
+        /* styles.css */
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.launcher-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 1;
+}
+
+.right-section {
+  flex: 1;
+  text-align: right;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+select {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+    </style>
+    <script>
+        // script.js
+document.getElementById('launch-button').addEventListener('click', function() {
+  var version = document.getElementById('version-dropdown').value;
+  if (version === '1.5.2') {
+    window.location.href = '1.5.html';
+  } else if (version === '1.8.8') {
+    window.location.href = 'soon.html';
+  }
+});
+
+    </script>
+</html>
